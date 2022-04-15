@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ruby on Rails Test Application</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <%= render partial: 'layouts/header' %>
+  
+    <div class="hero">
+      <p class="hero-space"></p>
+      <% flash.each do |type, msg| %>
+        <div class="alert alert-<%= type %> alert-dismissable fade show" role="alert">
+          <%= msg %>
+          <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+      <% end %>
+      <%# <div class="alert alert-success alert-dismissable fade show" role="alert">%>
+      <div class="container">
+        <%= yield %>
+      </div>
+      <br />
+      <div class="container">
+        <footer class="footer">
+          <p class="text-white font-weight-bold">&copy; Ruby on Rails Test Application 2022</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

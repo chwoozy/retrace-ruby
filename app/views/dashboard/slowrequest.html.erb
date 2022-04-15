@@ -1,0 +1,13 @@
+<h1 class="font-weight-bold" align="center">SlowRequest</h1>
+<form action="<%= badapp_slowrequest_path %>" method="POST">
+  <%= select_tag(:apicall, options_for_select(Option::API_CALLS, params[:option] ), class:"select") %>
+  <div align="center">
+    <button
+      type="submit"
+      class="btn btn-primary font-weight-bold button-orange"
+      name="execute"
+    >
+      BAD APP
+    </button>
+  </div>
+</form>
