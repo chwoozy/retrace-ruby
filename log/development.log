@@ -1,0 +1,516 @@
+Started GET "/" for ::1 at 2022-04-14 18:39:04 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DashboardController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 56.7ms | Allocations: 32360)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 434)
+  Rendered layout layouts/application.html.erb (Duration: 82.2ms | Allocations: 47771)
+Completed 200 OK in 90ms (Views: 83.9ms | ActiveRecord: 0.0ms | Allocations: 51362)
+
+
+Started GET "/dashboard/orm" for ::1 at 2022-04-14 18:39:10 -0700
+Processing by DashboardController#orm as HTML
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE TABLE customer_privileges ( customer_id int, privilege_id int);[0m
+  ↳ app/controllers/dashboard_controller.rb:9:in `orm'
+  [1m[35m (7.4ms)[0m  [1m[35mDROP TABLE IF EXISTS customer_privileges;[0m
+  ↳ app/controllers/dashboard_controller.rb:13:in `orm'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/orm.html.erb within layouts/application
+  Rendered dashboard/orm.html.erb within layouts/application (Duration: 3.4ms | Allocations: 194)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 4652)
+Completed 200 OK in 78ms (Views: 25.1ms | ActiveRecord: 49.4ms | Allocations: 6247)
+
+
+Started POST "/bad_app/orm" for ::1 at 2022-04-14 18:39:12 -0700
+Processing by BadAppController#orm as HTML
+  Parameters: {"execute"=>""}
+  [1m[35mSQL (14.2ms)[0m  [1m[34mSELECT id, first_name, last_name, city, country_region, mobile_phone FROM customers;[0m
+  ↳ app/controllers/bad_app_controller.rb:10:in `orm'
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 1 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 2 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 3 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 4 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 5 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 6 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 7 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 8 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 9 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 10 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 11 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 12 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 13 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 14 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 15 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 16 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 17 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 18 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 19 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 20 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 21 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 22 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 23 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 24 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 25 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 26 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 27 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 28 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT id, order_date, employee_id, customer_id, shipping_fee, taxes, payment_type FROM orders WHERE customer_id = 29 LIMIT 1;[0m
+  ↳ app/controllers/bad_app_controller.rb:15:in `block in orm'
+ORM SQL query executed succesfully
+Redirected to http://localhost:3000/dashboard/orm
+Completed 302 Found in 62ms (ActiveRecord: 33.7ms | Allocations: 14838)
+
+
+Started GET "/dashboard/orm" for ::1 at 2022-04-14 18:39:12 -0700
+Processing by DashboardController#orm as HTML
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE customer_privileges ( customer_id int, privilege_id int);[0m
+  ↳ app/controllers/dashboard_controller.rb:9:in `orm'
+  [1m[35m (2.4ms)[0m  [1m[35mDROP TABLE IF EXISTS customer_privileges;[0m
+  ↳ app/controllers/dashboard_controller.rb:13:in `orm'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/orm.html.erb within layouts/application
+  Rendered dashboard/orm.html.erb within layouts/application (Duration: 0.1ms | Allocations: 66)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4523)
+Completed 200 OK in 16ms (Views: 5.1ms | ActiveRecord: 10.0ms | Allocations: 5824)
+
+
+Started GET "/dashboard/slowdb" for ::1 at 2022-04-14 18:39:14 -0700
+Processing by DashboardController#slowdb as HTML
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT
+              customers.id,
+              customers.first_name,
+              customers.last_name,
+              customers.email_address,
+              customers.mobile_phone,
+              orders.id AS order_id,
+              orders.shipping_fee,
+              orders.taxes
+              FROM customers
+              LEFT JOIN orders ON customers.id = orders.customer_id
+              UNION
+              SELECT
+              customers.id,
+              customers.first_name,
+              customers.last_name,
+              customers.email_address,
+              customers.mobile_phone,
+              orders.id AS order_id,
+              orders.shipping_fee,
+              orders.taxes
+              FROM customers
+              RIGHT JOIN orders ON customers.id = orders.customer_id
+              ORDER BY id;[0m
+  ↳ app/controllers/dashboard_controller.rb:49:in `slowdb'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowdb.html.erb within layouts/application
+  Rendered dashboard/slowdb.html.erb within layouts/application (Duration: 1.0ms | Allocations: 182)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4491)
+Completed 200 OK in 22ms (Views: 9.0ms | ActiveRecord: 4.7ms | Allocations: 6479)
+
+
+Started POST "/bad_app/slowdb" for ::1 at 2022-04-14 18:39:15 -0700
+Processing by BadAppController#slowdb as HTML
+  Parameters: {"execute"=>""}
+  [1m[35m (2.2ms)[0m  [1m[35mcall 5sec_proc()[0m
+  ↳ app/controllers/bad_app_controller.rb:35:in `slowdb'
+SlowDB SQL query executed succesfully
+Redirected to http://localhost:3000/dashboard/slowdb
+Completed 302 Found in 4ms (ActiveRecord: 2.2ms | Allocations: 712)
+
+
+Started GET "/dashboard/slowdb" for ::1 at 2022-04-14 18:39:15 -0700
+Processing by DashboardController#slowdb as HTML
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT
+              customers.id,
+              customers.first_name,
+              customers.last_name,
+              customers.email_address,
+              customers.mobile_phone,
+              orders.id AS order_id,
+              orders.shipping_fee,
+              orders.taxes
+              FROM customers
+              LEFT JOIN orders ON customers.id = orders.customer_id
+              UNION
+              SELECT
+              customers.id,
+              customers.first_name,
+              customers.last_name,
+              customers.email_address,
+              customers.mobile_phone,
+              orders.id AS order_id,
+              orders.shipping_fee,
+              orders.taxes
+              FROM customers
+              RIGHT JOIN orders ON customers.id = orders.customer_id
+              ORDER BY id;[0m
+  ↳ app/controllers/dashboard_controller.rb:49:in `slowdb'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowdb.html.erb within layouts/application
+  Rendered dashboard/slowdb.html.erb within layouts/application (Duration: 1.7ms | Allocations: 62)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4371)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 2.3ms | Allocations: 7180)
+
+
+Started GET "/dashboard/slowrequest" for ::1 at 2022-04-14 18:39:17 -0700
+Processing by DashboardController#slowrequest as HTML
+  [1m[35m (9.6ms)[0m  [1m[34mSELECT
+              orders.id,
+              orders.order_date,
+              orders.shipped_date,
+              orders.shipping_fee,
+              orders.taxes,
+              orders.payment_type,
+              orders_status.id AS status_id,
+              orders_status.status_name
+              FROM orders
+              LEFT JOIN orders_status
+              ON orders.id = orders_status.id
+              ORDER BY order_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:69:in `slowrequest'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowrequest.html.erb within layouts/application
+  Rendered dashboard/slowrequest.html.erb within layouts/application (Duration: 6.9ms | Allocations: 950)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5447)
+Completed 200 OK in 29ms (Views: 16.8ms | ActiveRecord: 9.6ms | Allocations: 7385)
+
+
+Started POST "/bad_app/slowrequest" for ::1 at 2022-04-14 18:39:20 -0700
+Processing by BadAppController#slowrequest as HTML
+  Parameters: {"apicall"=>"/getusers", "execute"=>""}
+Redirected to http://localhost:3000/dashboard/slowrequest
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started GET "/dashboard/slowrequest" for ::1 at 2022-04-14 18:39:20 -0700
+Processing by DashboardController#slowrequest as HTML
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT
+              orders.id,
+              orders.order_date,
+              orders.shipped_date,
+              orders.shipping_fee,
+              orders.taxes,
+              orders.payment_type,
+              orders_status.id AS status_id,
+              orders_status.status_name
+              FROM orders
+              LEFT JOIN orders_status
+              ON orders.id = orders_status.id
+              ORDER BY order_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:69:in `slowrequest'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowrequest.html.erb within layouts/application
+  Rendered dashboard/slowrequest.html.erb within layouts/application (Duration: 0.5ms | Allocations: 209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4519)
+Completed 200 OK in 18ms (Views: 10.6ms | ActiveRecord: 1.9ms | Allocations: 6384)
+
+
+Started GET "/dashboard/swallowedexception" for ::1 at 2022-04-14 18:39:24 -0700
+Processing by DashboardController#swallowedexception as HTML
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT
+              purchase_orders.id,
+              purchase_orders.supplier_id,
+              purchase_orders.created_by,
+              purchase_orders.creation_date,
+              purchase_orders.shipping_fee,
+              purchase_orders.taxes,
+              purchase_orders.payment_amount,
+              purchase_orders.payment_method,
+              purchase_order_status.id AS status_id,
+              purchase_order_status.status
+              FROM purchase_order_status
+              RIGHT JOIN purchase_orders
+              ON purchase_order_status.id = purchase_orders.status_id
+              ORDER BY creation_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:90:in `swallowedexception'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/swallowedexception.html.erb within layouts/application
+  Rendered dashboard/swallowedexception.html.erb within layouts/application (Duration: 1.3ms | Allocations: 178)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4484)
+Completed 200 OK in 24ms (Views: 13.5ms | ActiveRecord: 3.1ms | Allocations: 6236)
+
+
+Started POST "/bad_app/swallowedexception" for ::1 at 2022-04-14 18:39:25 -0700
+Processing by BadAppController#swallowedexception as HTML
+  Parameters: {"execute"=>""}
+SwallowedException successful
+Redirected to http://localhost:3000/dashboard/swallowedexception
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms | Allocations: 729)
+
+
+Started GET "/dashboard/swallowedexception" for ::1 at 2022-04-14 18:39:25 -0700
+Processing by DashboardController#swallowedexception as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT
+              purchase_orders.id,
+              purchase_orders.supplier_id,
+              purchase_orders.created_by,
+              purchase_orders.creation_date,
+              purchase_orders.shipping_fee,
+              purchase_orders.taxes,
+              purchase_orders.payment_amount,
+              purchase_orders.payment_method,
+              purchase_order_status.id AS status_id,
+              purchase_order_status.status
+              FROM purchase_order_status
+              RIGHT JOIN purchase_orders
+              ON purchase_order_status.id = purchase_orders.status_id
+              ORDER BY creation_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:90:in `swallowedexception'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/swallowedexception.html.erb within layouts/application
+  Rendered dashboard/swallowedexception.html.erb within layouts/application (Duration: 0.1ms | Allocations: 67)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4516)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 6260)
+
+
+Started GET "/dashboard/untracked" for ::1 at 2022-04-14 18:39:28 -0700
+Processing by DashboardController#untracked as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/untracked.erb within layouts/application
+  Rendered dashboard/untracked.erb within layouts/application (Duration: 0.6ms | Allocations: 174)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4480)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 5062)
+
+
+Started POST "/bad_app/untracked" for ::1 at 2022-04-14 18:39:30 -0700
+Processing by BadAppController#untracked as HTML
+  Parameters: {"execute"=>""}
+  [1m[35m (3.7ms)[0m  [1m[35mcall bad_getsupplierid_proc()[0m
+  ↳ app/controllers/bad_app_controller.rb:81:in `untracked'
+Untracked application call executed succesfully
+Redirected to http://localhost:3000/dashboard/untracked
+Completed 302 Found in 8ms (ActiveRecord: 3.7ms | Allocations: 705)
+
+
+Started GET "/dashboard/untracked" for ::1 at 2022-04-14 18:39:30 -0700
+Processing by DashboardController#untracked as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/untracked.erb within layouts/application
+  Rendered dashboard/untracked.erb within layouts/application (Duration: 0.1ms | Allocations: 62)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4371)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 4799)
+
+
+Started GET "/dashboard/slowrequest" for ::1 at 2022-04-14 18:40:06 -0700
+Processing by DashboardController#slowrequest as HTML
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT
+              orders.id,
+              orders.order_date,
+              orders.shipped_date,
+              orders.shipping_fee,
+              orders.taxes,
+              orders.payment_type,
+              orders_status.id AS status_id,
+              orders_status.status_name
+              FROM orders
+              LEFT JOIN orders_status
+              ON orders.id = orders_status.id
+              ORDER BY order_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:69:in `slowrequest'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowrequest.html.erb within layouts/application
+  Rendered dashboard/slowrequest.html.erb within layouts/application (Duration: 1.4ms | Allocations: 219)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 4528)
+Completed 200 OK in 66ms (Views: 22.5ms | ActiveRecord: 4.4ms | Allocations: 7271)
+
+
+Started POST "/bad_app/slowrequest" for ::1 at 2022-04-14 18:40:08 -0700
+Processing by BadAppController#slowrequest as HTML
+  Parameters: {"apicall"=>"/getusers", "execute"=>""}
+Redirected to http://localhost:3000/dashboard/slowrequest
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 264)
+
+
+Started GET "/dashboard/slowrequest" for ::1 at 2022-04-14 18:40:08 -0700
+Processing by DashboardController#slowrequest as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT
+              orders.id,
+              orders.order_date,
+              orders.shipped_date,
+              orders.shipping_fee,
+              orders.taxes,
+              orders.payment_type,
+              orders_status.id AS status_id,
+              orders_status.status_name
+              FROM orders
+              LEFT JOIN orders_status
+              ON orders.id = orders_status.id
+              ORDER BY order_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:69:in `slowrequest'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowrequest.html.erb within layouts/application
+  Rendered dashboard/slowrequest.html.erb within layouts/application (Duration: 0.3ms | Allocations: 209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 4521)
+Completed 200 OK in 19ms (Views: 12.7ms | ActiveRecord: 1.0ms | Allocations: 6295)
+
+
+Started GET "/dashboard/slowrequest" for ::1 at 2022-04-14 18:40:21 -0700
+Processing by DashboardController#slowrequest as HTML
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT
+              orders.id,
+              orders.order_date,
+              orders.shipped_date,
+              orders.shipping_fee,
+              orders.taxes,
+              orders.payment_type,
+              orders_status.id AS status_id,
+              orders_status.status_name
+              FROM orders
+              LEFT JOIN orders_status
+              ON orders.id = orders_status.id
+              ORDER BY order_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:69:in `slowrequest'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowrequest.html.erb within layouts/application
+  Rendered dashboard/slowrequest.html.erb within layouts/application (Duration: 0.8ms | Allocations: 209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 4515)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 1.8ms | Allocations: 6282)
+
+
+Started POST "/bad_app/slowrequest" for ::1 at 2022-04-14 18:40:23 -0700
+Processing by BadAppController#slowrequest as HTML
+  Parameters: {"apicall"=>"/getusers", "execute"=>""}
+Redirected to http://localhost:3000/dashboard/slowrequest
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 263)
+
+
+Started GET "/dashboard/slowrequest" for ::1 at 2022-04-14 18:40:23 -0700
+Processing by DashboardController#slowrequest as HTML
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT
+              orders.id,
+              orders.order_date,
+              orders.shipped_date,
+              orders.shipping_fee,
+              orders.taxes,
+              orders.payment_type,
+              orders_status.id AS status_id,
+              orders_status.status_name
+              FROM orders
+              LEFT JOIN orders_status
+              ON orders.id = orders_status.id
+              ORDER BY order_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:69:in `slowrequest'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowrequest.html.erb within layouts/application
+  Rendered dashboard/slowrequest.html.erb within layouts/application (Duration: 0.2ms | Allocations: 209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 91)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4517)
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 2.8ms | Allocations: 6291)
+
+
+Started GET "/dashboard/slowrequest" for ::1 at 2022-04-14 18:40:30 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by DashboardController#slowrequest as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT
+              orders.id,
+              orders.order_date,
+              orders.shipped_date,
+              orders.shipping_fee,
+              orders.taxes,
+              orders.payment_type,
+              orders_status.id AS status_id,
+              orders_status.status_name
+              FROM orders
+              LEFT JOIN orders_status
+              ON orders.id = orders_status.id
+              ORDER BY order_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:69:in `slowrequest'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowrequest.html.erb within layouts/application
+  Rendered dashboard/slowrequest.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 364)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 10277)
+Completed 200 OK in 22ms (Views: 16.1ms | ActiveRecord: 1.1ms | Allocations: 15365)
+
+
+Started POST "/bad_app/slowrequest" for ::1 at 2022-04-14 18:40:32 -0700
+Processing by BadAppController#slowrequest as HTML
+  Parameters: {"apicall"=>"/getusers", "execute"=>""}
+SlowRequest API called successfully
+Redirected to http://localhost:3000/dashboard/slowrequest
+Completed 302 Found in 990ms (ActiveRecord: 0.0ms | Allocations: 1676)
+
+
+Started GET "/dashboard/slowrequest" for ::1 at 2022-04-14 18:40:33 -0700
+Processing by DashboardController#slowrequest as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT
+              orders.id,
+              orders.order_date,
+              orders.shipped_date,
+              orders.shipping_fee,
+              orders.taxes,
+              orders.payment_type,
+              orders_status.id AS status_id,
+              orders_status.status_name
+              FROM orders
+              LEFT JOIN orders_status
+              ON orders.id = orders_status.id
+              ORDER BY order_date;[0m
+  ↳ app/controllers/dashboard_controller.rb:69:in `slowrequest'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/slowrequest.html.erb within layouts/application
+  Rendered dashboard/slowrequest.html.erb within layouts/application (Duration: 0.5ms | Allocations: 230)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 4672)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 1.0ms | Allocations: 6599)
+
+

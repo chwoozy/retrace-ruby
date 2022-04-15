@@ -1,0 +1,3 @@
+class InventoryTransaction < ApplicationRecord
+
+end
