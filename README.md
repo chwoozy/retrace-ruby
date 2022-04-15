@@ -1,22 +1,11 @@
-# README
+# Retrace
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Used for random traffic generation for the Retrace sandbox environment.
 
-Things you may want to cover:
+Dependencies
 
-* Ruby version '3.0.1'
+- Ruby version '3.0.1'
 
-* yarn
+- Rails version '6.1.4.1'
 
-* Configuration in database.yml 
-  username: <username>
-  password: <password>
-
-* rails db:create
-
-* rails db:structure:load
-
-* rails db:schema:load
-
-*  bundle exec rails db < ./db/dump.sql
+- Using mysql2 as db for active record
